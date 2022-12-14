@@ -1,5 +1,5 @@
-import { Notification } from 'src/app/entities/Notification';
 import { NotificationContent } from 'src/app/entities/NotificationContent';
+import { Notification } from 'src/app/entities/Notification';
 
 export class SendNotificationUseCase {
   async execute(input: ISendNotificationUseCase): Promise<Notification> {
