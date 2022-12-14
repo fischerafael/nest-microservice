@@ -9,7 +9,7 @@ describe('NotificationContent', () => {
       recipientId: '1212',
     });
     expect(result.category).toBe('test');
-    expect(result.content).toBe('Hi, how are you');
+    expect(result.content.value).toBe('Hi, how are you');
     expect(result.recipientId).toBe('1212');
   });
 });
