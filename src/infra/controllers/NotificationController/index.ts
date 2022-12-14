@@ -1,5 +1,5 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
-import { CreateNotificationBody } from 'src/infra/create.notification.body';
+import { Body, Controller, Post } from '@nestjs/common';
+import { CreateNotificationBody } from 'src/infra/controllers/NotificationController/create.notification.body';
 
 @Controller('notifications')
 export class NotificationsController {

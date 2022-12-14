@@ -1,7 +1,8 @@
 import { Module } from '@nestjs/common';
+import { NotificationsController } from '../controllers/NotificationController';
 
 @Module({
   imports: [],
-  controllers: [],
+  controllers: [NotificationsController],
 })
 export class HttpModule {}
