@@ -4,7 +4,7 @@ export class Notification {
   private props: INotificationProps;
 
   constructor(props: INotificationRequest) {
-    this.props = { ...props, createdAt: new Date() };
+    this.props = { ...props, createdAt: props.createdAt ?? new Date() };
   }
 
   public set recipientId(data: string) {
@@ -40,7 +40,7 @@ export class Notification {
   }
 
   public get createdAt(): Date {
-    return this.props.createdAt;
+    return this.props.createdAt!;
   }
 }
 
@@ -48,9 +48,9 @@ export interface INotificationRequest {
   content: NotificationContent;
   category: string;
   recipientId: string;
+  createdAt?: Date;
 }
 
 export interface INotificationProps extends INotificationRequest {
   readAt?: Date | null;
-  createdAt: Date;
 }
