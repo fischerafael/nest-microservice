@@ -1,3 +1,5 @@
+// DATA VALUE OBJECT - SELF VALIDATING OBJECT TO KEEP VALIDATION COHESE
+
 export class NotificationContent {
   constructor(private readonly content: string) {
     if (!this.validate(content)) {
