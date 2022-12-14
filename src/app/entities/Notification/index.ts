@@ -2,9 +2,15 @@ import { NotificationContent } from '../NotificationContent';
 
 export class Notification {
   private props: INotificationProps;
+  private _id: string;
 
   constructor(props: INotificationRequest) {
+    this._id = crypto.randomUUID();
     this.props = { ...props, createdAt: props.createdAt ?? new Date() };
+  }
+
+  public get id(): string {
+    return this._id;
   }
 
   public set recipientId(data: string) {
