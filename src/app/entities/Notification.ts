@@ -1,3 +1,5 @@
+import { NotificationContent } from './NotificationContent';
+
 export class Notification {
   private props: INotificationProps;
 
@@ -13,11 +15,11 @@ export class Notification {
     return this.props.recipientId;
   }
 
-  public set content(data: string) {
-    this.props.content = data;
+  public set content(content: NotificationContent) {
+    this.props.content = content;
   }
 
-  public get content(): string {
+  public get content(): NotificationContent {
     return this.props.content;
   }
 
@@ -43,16 +45,12 @@ export class Notification {
 }
 
 export interface INotificationRequest {
-  content: string;
+  content: NotificationContent;
   category: string;
   recipientId: string;
   createdAt: Date;
 }
 
 export interface INotificationProps extends INotificationRequest {
-  content: string;
-  category: string;
-  recipientId: string;
-  createdAt: Date;
   readAt?: Date | null;
 }
