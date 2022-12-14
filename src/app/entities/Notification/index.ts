@@ -1,4 +1,4 @@
-import { NotificationContent } from './NotificationContent';
+import { NotificationContent } from '../NotificationContent';
 
 export class Notification {
   private props: INotificationProps;
