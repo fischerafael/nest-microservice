@@ -1,11 +1,12 @@
 import { NotificationContent } from '../NotificationContent';
+import { randomUUID } from 'node:crypto';
 
 export class Notification {
   private props: INotificationProps;
   private _id: string;
 
   constructor(props: INotificationRequest) {
-    this._id = crypto.randomUUID();
+    this._id = randomUUID();
     this.props = { ...props, createdAt: props.createdAt ?? new Date() };
   }
 
