@@ -7,7 +7,7 @@ export class CreateNotificationBody {
   recipientId!: string;
   @IsNotEmpty()
   @Length(5, 240)
-  content!: NotificationContent;
+  content!: string;
   @IsNotEmpty()
   category!: string;
 }
