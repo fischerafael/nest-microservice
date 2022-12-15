@@ -14,6 +14,7 @@ export class SendNotificationUseCase {
       content: new NotificationContent(content),
       recipientId,
     });
+    console.log('USE CASE - ', notification.createdAt);
     await this.notificationRepository.create(notification);
     return notification;
   }

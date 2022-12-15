@@ -7,7 +7,10 @@ export class Notification {
 
   constructor(props: INotificationRequest) {
     this._id = randomUUID();
-    this.props = { ...props, createdAt: props.createdAt ?? new Date() };
+    this.props = {
+      ...props,
+      createdAt: props.createdAt ? props.createdAt : new Date(),
+    };
   }
 
   public get id(): string {
