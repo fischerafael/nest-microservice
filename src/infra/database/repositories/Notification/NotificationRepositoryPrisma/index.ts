@@ -3,6 +3,7 @@ import { Notification } from 'src/app/entities/Notification';
 import { NotificationRepository } from 'src/app/repositories/Notification/NotificationRepository';
 import { PrismaService } from 'src/infra/database/prisma.service';
 
+@Injectable()
 export class NotificationRepositoryPrisma implements NotificationRepository {
   constructor(private prismaService: PrismaService) {}
 
